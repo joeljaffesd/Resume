@@ -25,30 +25,46 @@ jobs:
         latexmk_use_lualatex: false
         args: -pdf -file-line-error -halt-on-error -interaction=nonstopmode
 
+    - name: Rename PDF
+      run: mv main.pdf Jaffe_JoelA_Resume.pdf
+
+    - name: Install ImageMagick
+      run: sudo apt-get update && sudo apt-get install -y imagemagick ghostscript
+
+    - name: Configure ImageMagick policy
+      run: |
+        sudo sed -i 's/rights="none" pattern="PDF"/rights="read|write" pattern="PDF"/' /etc/ImageMagick-6/policy.xml
+
+    - name: Convert PDF to PNG
+      run: |
+        convert -density 300 Jaffe_JoelA_Resume.pdf -quality 90 Jaffe_JoelA_Resume.png
+
     - name: Upload PDF artifact
       uses: actions/upload-artifact@v4
       with:
-        name: lac-template-pdf
-        path: main.pdf
+        name: Joel A. Jaffe - Resume
+        path: |
+          Jaffe_JoelA_Resume.pdf
+          Jaffe_JoelA_Resume.png
 
     - name: Create Release
       if: github.ref == 'refs/heads/main' && github.event_name == 'push'
       uses: softprops/action-gh-release@v1
       with:
         tag_name: v${{ github.run_number }}
-        name: LAC Template v${{ github.run_number }}
+        name: Joel A. Jaffe Resume v${{ github.run_number }}
         body: |
-          Automatically generated LAC-25 template PDF from commit ${{ github.sha }}.
+          Automatically generated resume PDF from commit ${{ github.sha }}.
           
-          This release contains the compiled PDF of the LAC-25 paper template.
+          This release contains a compiled PDF of my resume.
           
           ## Changes
           - Built from commit: ${{ github.sha }}
           - Build date: ${{ github.event.head_commit.timestamp }}
           
-          ## Usage
-          Download the PDF to see the formatted template output, or use the source code to create your own LAC-25 paper.
-        files: main.pdf
+        files: |
+          Jaffe_JoelA_Resume.pdf
+          Jaffe_JoelA_Resume.png
         draft: false
         prerelease: false
       env:
