@@ -1,0 +1,158 @@
+\documentclass[11pt,letterpaper]{article}
+
+% Packages
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{xcolor}
+
+% Page setup
+\geometry{margin=0.75in}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.5em}
+\pagestyle{empty}
+
+% Section formatting
+\titleformat{\section}
+  {\large\bfseries}{\thesection}{0em}{}[\titlerule]
+\titlespacing*{\section}{0pt}{1em}{0.5em}
+
+% Subsection formatting (for job titles, etc.)
+\titleformat{\subsection}
+  {\bfseries}{\thesubsection}{0em}{}
+\titlespacing*{\subsection}{0pt}{0.75em}{0.25em}
+
+% Hyperlink setup
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue,
+    pdftitle={Joel A. Jaffe Resume}
+}
+
+% Custom commands
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\begin{document}
+
+% ==================== HEADER ====================
+\begin{center}
+    {\Huge \textbf{Joel A. Jaffe}} \\
+    \vspace{0.3em}
+    6855 Del Playa Drive, Goleta, CA 93117 \\
+    (858) 444-5207 $|$ \href{mailto:joel@jaffesd.com}{joel@jaffesd.com} \\
+    \vspace{0.2em}
+    \href{https://joeljaffesd.com}{joeljaffesd.com} $|$ 
+    \href{https://instagram.com/joeljaffesd}{instagram/joeljaffesd} $|$
+    \href{https://linkedin.com/in/joeljaffesd}{linkedin.com/in/joeljaffesd} $|$
+    \href{https://github.com/joeljaffesd}{github.com/joeljaffesd}
+
+    Making music tech that moves people.
+\end{center}
+
+% ==================== EDUCATION ====================
+\section*{EDUCATION}
+
+\textbf{Master of Science in Media Arts \& Technology} \hfill June 2026 \\
+\textit{University of California Santa Barbara}, Santa Barbara, CA
+\vspace{-1em}
+\begin{itemize}[leftmargin=2em,itemsep=0pt,parsep=0pt]
+    \item Project based curriculum culminating in an open-source digital audio product
+    \item Graduate courses in digital audio programming, computer graphics \& distributed computing
+    \item Published in AES Convention proceedings
+\end{itemize}
+
+\textbf{Bachelor of Arts in Music Studies} \hfill June 2024 \\
+\textit{University of California Santa Barbara}, Santa Barbara, CA
+\vspace{-1em}
+\begin{itemize}[leftmargin=2em,itemsep=0pt,parsep=0pt]
+    \item Undergraduate courses in tonal harmony, musicology and cross-discipline electives
+    \item Graduate courses in digital audio programming, computer graphics \& distributed computing with the Media Arts \& Technology program
+\end{itemize}
+
+% ==================== EXPERIENCE ====================
+\section*{EXPERIENCE}
+
+\textbf{Technician} \hfill June 2022 to September 2024 \\
+\textit{Jensen Guitar \& Music Company}, Santa Barbara, CA
+\vspace{-1em}
+\begin{itemize}[leftmargin=2em,itemsep=0pt,parsep=0pt]
+    \item Repair, modification, and maintenance of acoustic and electric guitars
+\end{itemize}
+
+\textbf{Student Service Desk Agent} \hfill September -- November 2024 \\
+\textit{UCSB Information Technology Services}, Santa Barbara, CA
+\vspace{-1em}
+\begin{itemize}[leftmargin=2em,itemsep=0pt,parsep=0pt]
+    \item End user support, auditing and reorganization of training materials
+    \item Automation for Windows OS \& Google G Suite
+\end{itemize}
+
+\textbf{Lifeguard} \hfill June -- August 2019 \\
+\textit{Lawrence Family Jewish Community Center}, La Jolla, CA
+\vspace{-1em}
+\begin{itemize}[leftmargin=2em,itemsep=0pt,parsep=0pt]
+    \item Olympic pool lifeguard with facility operation duties
+\end{itemize}
+
+\textbf{Office Management and Data Analytics} \hfill May -- August 2018 \\
+\textit{San Diego Computer Consulting}, San Diego, CA
+\vspace{-1em}
+\begin{itemize}[leftmargin=2em,itemsep=0pt,parsep=0pt]
+    \item Data wrangling \& analysis with MS Excel
+\end{itemize}
+
+% ==================== SKILLS ====================
+\section*{SKILLS}
+
+\textbf{General}
+\begin{itemize}[leftmargin=*,itemsep=0pt,parsep=0pt]
+    \item Critical \& Creative Thinking
+    \item Small Teams Leadership
+    \item Love of Learning
+    \item Technical Writing
+\end{itemize}
+
+\textbf{Technical}
+\begin{itemize}[leftmargin=*,itemsep=0pt,parsep=0pt]
+    \item Audio DSP with C++, Max/MSP, Gen\textasciitilde{}, Python
+    \item Analog electronics analysis, design and prototyping
+    \item FreeCAD \& EasyEDA
+    \item Literate programming with Python Notebooks
+    \item Linux, Docker, Bash, Git \& GitHub
+    \item Logic, Pro Tools, Audacity
+    \item Composition \& analysis with tonal harmony
+    \item Live sound engineering \& recording
+\end{itemize}
+
+% ==================== EXTRACURRICULAR ====================
+\section*{EXTRACURRICULAR ACTIVITIES \& HONORS}
+
+\begin{itemize}[leftmargin=*,itemsep=0pt,parsep=0pt]
+    \item 2\textsuperscript{nd} Place -- UCSB New Venture Competition 2025
+    \item 1\textsuperscript{st} Place -- UCSB ASPB Battle of the Bands 2022
+    \item Scribe -- Alpha Epsilon Pi, Sigma Beta Chapter 2021
+    \item Eagle Scout -- Scouting BSA 2019
+    \item President of Jewish Student Union (La Jolla High Chapter) 2018--2019
+\end{itemize}
+
+% ==================== DISCOGRAPHY ====================
+\section*{DISCOGRAPHY}
+
+\begin{itemize}[leftmargin=*,itemsep=0pt,parsep=0pt]
+    \item Lost \& Found / Bruce, DUENDE (2022)
+    \item Balancing Act, Happy Medium (2022)
+    \item Confess, DUENDE (2021)
+    \item Somewhere, Lay Low (2021)
+\end{itemize}
+
+\end{document}
